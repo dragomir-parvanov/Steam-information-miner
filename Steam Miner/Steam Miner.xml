@@ -1,0 +1,546 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Steam Miner</name>
+    </assembly>
+    <members>
+        <member name="T:Steam_Miner.Models.ClassID">
+            <summary>
+            used for identifying steam items.
+            </summary>
+        </member>
+        <member name="P:Steam_Miner.Models.ClassID.ClassId">
+            <summary>
+            Gets or sets the class identifier.
+            </summary>
+            <value>
+            The class identifier.
+            </value>
+        </member>
+        <member name="P:Steam_Miner.Models.ClassID.Count">
+            <summary>
+            Gets or sets the count.
+            </summary>
+            <value>
+            The count.
+            </value>
+        </member>
+        <member name="T:Steam_Miner.Models.Item">
+            <summary>
+            Represents model steam item.
+            </summary>
+        </member>
+        <member name="P:Steam_Miner.Models.Item.Id">
+            <summary>
+            Gets or sets the identifier.
+            </summary>
+            <value>
+            The identifier.
+            </value>
+        </member>
+        <member name="P:Steam_Miner.Models.Item.Count">
+            <summary>
+            Gets or sets the count of the item.
+            </summary>
+        </member>
+        <member name="T:Steam_Miner.Models.ItemID">
+            <summary>
+            Used for identifying steam items by their description.
+            </summary>
+        </member>
+        <member name="P:Steam_Miner.Models.ItemID.MarketName">
+            <summary>
+            Gets or sets the market hash name of the item.
+            </summary>
+            <value>
+            The market hash name.
+            </value>
+        </member>
+        <member name="P:Steam_Miner.Models.ItemID.ClassID">
+            <summary>
+            Gets or sets the class identifier.
+            </summary>
+            <value>
+            The class identifier.
+            </value>
+        </member>
+        <member name="T:Steam_Miner.Models.ItemPrice">
+            <summary>
+            model for getting steam item prices from steam market.
+            </summary>
+        </member>
+        <member name="P:Steam_Miner.Models.ItemPrice.Name">
+            <summary>
+            Gets or sets the market hash name of the item.
+            </summary>
+            <value>The name.</value>
+        </member>
+        <member name="P:Steam_Miner.Models.ItemPrice.Volume">
+            <summary>
+            Gets or sets the volume.
+            </summary>
+            <value>The quantily sold of the item for 24 hours at the community market.</value>
+        </member>
+        <member name="P:Steam_Miner.Models.ItemPrice.LowestPrice">
+            <summary>
+            Gets or sets the lowest price.
+            </summary>
+            <value>The lowest price for the item at the moment at the community market.</value>
+        </member>
+        <member name="P:Steam_Miner.Models.ItemPrice.AveragePrice">
+            <summary>
+            Gets or sets the average price.
+            </summary>
+            <value>The average price (24 hours record).</value>
+        </member>
+        <member name="P:Steam_Miner.Models.ItemPrice.SellPrice">
+            <summary>
+            Gets or sets the sell price.
+            </summary>
+            <value>The price that this item can be sold.</value>
+        </member>
+        <member name="T:Steam_Miner.Models.ScannedProfile">
+            <summary>
+            Scanned profile with all his attributes.
+            </summary>
+        </member>
+        <member name="P:Steam_Miner.Models.ScannedProfile.SteamID64">
+            <summary>
+            Gets or sets the steam ID64 of a steam profile..
+            </summary>
+            <value>
+            The steam ID- its always 17 digits.
+            </value>
+        </member>
+        <member name="P:Steam_Miner.Models.ScannedProfile.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+            <value>The Steam name.</value>
+        </member>
+        <member name="P:Steam_Miner.Models.ScannedProfile.Country">
+            <summary>
+            Gets or sets the country.
+            </summary>
+            <value>The country.</value>
+        </member>
+        <member name="P:Steam_Miner.Models.ScannedProfile.IsAccountLimited">
+            <summary>
+            Gets or sets a value indicating whether this profile instance account is limited.
+            </summary>
+            <value><c>true</c> if this instance is account limited; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Steam_Miner.Models.ScannedProfile.IsInventoryPrivate">
+            <summary>
+            Gets or sets a value indicating whether this profile instance inventory is private.
+            </summary>
+            <value><c>true</c> if this instance is inventory private; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Steam_Miner.Models.ScannedProfile.HasCsgo">
+            <summary>
+            Gets or sets a value indicating whether this profile instance has csgo.
+            </summary>
+            <value><c>true</c> if this instance has csgo; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Steam_Miner.Models.ScannedProfile.PrivacyStatus">
+            <summary>
+            Gets or sets the privacy status. <see cref="P:Steam_Miner.Models.ScannedProfile.PrivacyStatus"/>.
+            </summary>
+            <value>The privacy status.</value>
+        </member>
+        <member name="P:Steam_Miner.Models.ScannedProfile.AccountCreated">
+            <summary>
+            Gets or sets the account created date.
+            </summary>
+            <value>The account created date.</value>
+        </member>
+        <member name="P:Steam_Miner.Models.ScannedProfile.AddedOn">
+            <summary>
+            Gets or sets the added on date.
+            </summary>
+            <value>The added on date.</value>
+        </member>
+        <member name="P:Steam_Miner.Models.ScannedProfile.Items">
+            <summary>
+            Gets or sets the items in a profile.
+            </summary>
+            <value>
+            The items.
+            </value>
+        </member>
+        <member name="P:Steam_Miner.Models.ScannedProfile.OfflineSinceDays">
+            <summary>
+            Gets or sets the last time online of a steam profie.
+            </summary>
+            <value>
+            The last time online.
+            </value>
+        </member>
+        <member name="T:Steam_Miner.Models.ToBeScannedProfile">
+            <summary>
+            Profiles that are yet to be scanned.
+            </summary>
+        </member>
+        <member name="P:Steam_Miner.Models.ToBeScannedProfile.SteamID64">
+            <summary>
+            Gets or sets the steam 64 ID of a profile.
+            </summary>
+        </member>
+        <member name="P:Steam_Miner.Models.ToBeScannedProfile.FromCsgoGroup">
+            <summary>
+            Gets or sets a value indicating whether if the steamID64 is from a csgo group.
+            </summary>
+        </member>
+        <member name="T:Steam_Miner.Services.API.APIConfigService">
+            <inheritdoc/>
+        </member>
+        <member name="M:Steam_Miner.Services.API.APIConfigService.Key">
+            <inheritdoc/>
+        </member>
+        <member name="M:Steam_Miner.Services.API.APIConfigService.Url">
+            <inheritdoc/>
+        </member>
+        <member name="T:Steam_Miner.Services.API.GetService">
+            <inheritdoc/>
+        </member>
+        <member name="M:Steam_Miner.Services.API.GetService.Items">
+            <inheritdoc/>
+        </member>
+        <member name="M:Steam_Miner.Services.API.GetService.Profiles">
+            <inheritdoc/>
+        </member>
+        <member name="T:Steam_Miner.Services.API.HTTPRequesterService">
+            <inheritdoc/>
+        </member>
+        <member name="M:Steam_Miner.Services.API.HTTPRequesterService.Get(System.String,System.Int32,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Steam_Miner.Services.API.HTTPRequesterService.Post(System.String,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Steam_Miner.Services.API.IAPIConfigService">
+            <summary>
+            Api configuration.
+            </summary>
+        </member>
+        <member name="M:Steam_Miner.Services.API.IAPIConfigService.Key">
+            <summary>
+            Gets the api key for the remote server.
+            </summary>
+            <returns>api key.</returns>
+        </member>
+        <member name="M:Steam_Miner.Services.API.IAPIConfigService.Url">
+            <summary>
+            Gets the web Url for the remote server.
+            </summary>
+            <returns>remote server uri.</returns>
+        </member>
+        <member name="T:Steam_Miner.Services.API.IGetService">
+            <summary>
+            All HTTP GET methods.
+            </summary>
+        </member>
+        <member name="M:Steam_Miner.Services.API.IGetService.Profiles">
+            <summary>
+            Gets the profiles that needs to be scanned from API.
+            </summary>
+            <returns>List of profiles.</returns>
+        </member>
+        <member name="M:Steam_Miner.Services.API.IGetService.Items">
+            <summary>
+            Gets the items that needs to be scanned from API.
+            </summary>
+            <returns>List of items.</returns>
+        </member>
+        <member name="T:Steam_Miner.Services.API.IHTTPRequesterService">
+            <summary>
+            All HTTP request methods.
+            </summary>
+        </member>
+        <member name="M:Steam_Miner.Services.API.IHTTPRequesterService.Get(System.String,System.Int32,System.Int32)">
+            <summary>
+            Get request method.
+            </summary>
+            <param name="url">The URL that the request will be send to.</param>
+            <param name="maxTries">The max tries that the method will try to connect to the server, before giving up.</param>
+            <param name="secondsBeforeReTrying">The seconds after.</param>
+            <returns>JSON.</returns>
+        </member>
+        <member name="M:Steam_Miner.Services.API.IHTTPRequesterService.Post(System.String,System.String)">
+            <summary>
+            Post request method.
+            </summary>
+            <param name="url">The URL that the request will be send to.</param>
+            <param name="headers">The headers that we send in the POST request.</param>
+            <returns>Success response.</returns>
+        </member>
+        <member name="T:Steam_Miner.Services.API.IPostService">
+            <summary>
+            All HTTP POST methods.
+            </summary>
+        </member>
+        <member name="M:Steam_Miner.Services.API.IPostService.SendProfiles(System.Collections.Generic.List{Steam_Miner.Models.ScannedProfile})">
+            <summary>
+            Sends the profiles to the API.
+            </summary>
+            <param name="profiles">The scanned profiles that needs to be send.</param>
+        </member>
+        <member name="M:Steam_Miner.Services.API.IPostService.SendItems(System.Collections.Generic.List{Steam_Miner.Models.Item})">
+            <summary>
+            Sends the items to the API.
+            </summary>
+            <param name="items">The items that needs to be send.</param>
+        </member>
+        <member name="T:Steam_Miner.Services.API.PostService">
+            <inheritdoc/>
+        </member>
+        <member name="M:Steam_Miner.Services.API.PostService.SendProfiles(System.Collections.Generic.List{Steam_Miner.Models.ScannedProfile})">
+            <inheritdoc/>
+        </member>
+        <member name="M:Steam_Miner.Services.API.PostService.SendItems(System.Collections.Generic.List{Steam_Miner.Models.Item})">
+            <inheritdoc/>
+        </member>
+        <member name="T:Steam_Miner.Services.Steam.Advanced_HasCsgo_Obtainer.GetCsgoAdvanced">
+            <inheritdoc/>
+        </member>
+        <member name="M:Steam_Miner.Services.Steam.Advanced_HasCsgo_Obtainer.GetCsgoAdvanced.GetCsgo(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Steam_Miner.Services.Steam.Advanced_HasCsgo_Obtainer.GetCsgoFromGroups">
+            <inheritdoc/>
+        </member>
+        <member name="M:Steam_Miner.Services.Steam.Advanced_HasCsgo_Obtainer.GetCsgoFromGroups.GetCsgo(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Steam_Miner.Services.Steam.Advanced_HasCsgo_Obtainer.IGetCsgoAdvanced">
+            <summary>
+            Gets if the user owns csgo trought other sources.
+            Like workshops, csgo groups and screenshoots.
+            </summary>
+        </member>
+        <member name="M:Steam_Miner.Services.Steam.Advanced_HasCsgo_Obtainer.IGetCsgoAdvanced.GetCsgo(System.String)">
+            <summary>
+            Gets if the user owns csgo.
+            </summary>
+            <returns>if he owns CSGO, return true.</returns>
+            <param name="steamID64">The steam id that will be scanned for csgo.</param>
+        </member>
+        <member name="T:Steam_Miner.Services.Steam.Advanced_HasCsgo_Obtainer.IGetCsgoFromGroups">
+            <summary>
+            Gets if the player is in any csgo group.
+            </summary>
+        </member>
+        <member name="M:Steam_Miner.Services.Steam.Advanced_HasCsgo_Obtainer.IGetCsgoFromGroups.GetCsgo(System.String)">
+            <summary>
+            Gets the csgo.
+            </summary>
+            <param name="steamID64">The steam i D64.</param>
+            <returns>If he is any csgo related group, return true.</returns>
+        </member>
+        <member name="T:Steam_Miner.Services.Steam.Advanced_HasCsgo_Obtainer.IGetCsgoFromWorkshop">
+            <summary>
+            Gets if a profile have something related to csgo in steam workshop.
+            </summary>
+        </member>
+        <member name="M:Steam_Miner.Services.Steam.Advanced_HasCsgo_Obtainer.IGetCsgoFromWorkshop.FromScreenShots(System.String)">
+            <summary>
+            Gets if a profile have screenshoot from CSGO.
+            </summary>
+            <param name="steamID64">The steam ID64.</param>
+            <returns>If he have csgo related screenshoot, return true, otherwise false.</returns>
+        </member>
+        <member name="M:Steam_Miner.Services.Steam.Advanced_HasCsgo_Obtainer.IGetCsgoFromWorkshop.FromWorkShopItems(System.String)">
+            <summary>
+            Gets if a profile have any csgo related workshop item.
+            </summary>
+            <param name="steamID64">The steam ID64.</param>
+            <returns>If he have csgo related workshop item, return true, otherwise false.</returns>
+        </member>
+        <member name="T:Steam_Miner.Services.Steam.IInventoryService">
+            <summary>
+            Collects information about inventories.
+            </summary>
+        </member>
+        <member name="M:Steam_Miner.Services.Steam.IInventoryService.GetPlayerInventory(System.String,System.String)">
+            <summary>
+            Gets the player inventory.
+            OLD METHOD.
+            </summary>
+            <param name="steamID64">The steamID64 of the profile.</param>
+            <param name="gameAppID">The game application identifier.</param>
+            <returns>List of items.</returns>
+        </member>
+        <member name="T:Steam_Miner.Services.Steam.IItemPriceService">
+            <summary>
+            Collecting steam prices from steam community market.
+            </summary>
+        </member>
+        <member name="M:Steam_Miner.Services.Steam.IItemPriceService.GetItemPrices(System.Collections.Generic.List{System.String})">
+            <summary>
+            Gets the item prices.
+            </summary>
+            <param name="itemsUrls">The items.</param>
+            <returns>List of item with prices.</returns>
+        </member>
+        <member name="T:Steam_Miner.Services.Steam.InventoryService">
+            <inheritdoc/>
+        </member>
+        <member name="M:Steam_Miner.Services.Steam.InventoryService.GetPlayerInventory(System.String,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Steam_Miner.Services.Steam.IScanProfilesService">
+            <summary>
+            Scanning the the profiles from Steam.
+            </summary>
+        </member>
+        <member name="M:Steam_Miner.Services.Steam.IScanProfilesService.ScanProfiles(System.Collections.Generic.List{Steam_Miner.Models.ToBeScannedProfile})">
+            <summary>
+            Scans the profiles.
+            </summary>
+            <param name="profiles">The profiles.</param>
+            <returns>scanned profiles.</returns>
+        </member>
+        <member name="T:Steam_Miner.Services.Steam.ItemPriceService">
+            <inheritdoc/>
+        </member>
+        <member name="M:Steam_Miner.Services.Steam.ItemPriceService.GetItemPrices(System.Collections.Generic.List{System.String})">
+            <inheritdoc/>
+        </member>
+        <member name="T:Steam_Miner.Services.Steam.Parsers.IItemParserService">
+            <summary>
+            Parses string, so they can be parsed later to int, double etc...
+            </summary>
+        </member>
+        <member name="M:Steam_Miner.Services.Steam.Parsers.IItemParserService.PriceParse(System.String)">
+            <summary>
+            Correcting the output of a item prices.
+            </summary>
+            <example>if its "2,3$", make it "2.3".</example>
+            <param name="output">The output.</param>
+            <returns>Corrected output.</returns>
+        </member>
+        <member name="M:Steam_Miner.Services.Steam.Parsers.IItemParserService.VolumeParse(System.String)">
+            <summary>
+            Parses the volume of a steam item..
+            </summary>
+            <example>If its "1399,39" parse it to "139939".</example>
+            <param name="ouput">The json ouput.</param>
+            <returns>integer.</returns>
+        </member>
+        <member name="T:Steam_Miner.Services.Steam.Parsers.IParseService">
+            <summary>
+            Gets the privacy status of a profile.
+            </summary>
+        </member>
+        <member name="M:Steam_Miner.Services.Steam.Parsers.IParseService.GetPrivacyStatus(System.String)">
+            <summary>
+            Gets the privacy status of a steam profile.
+            </summary>
+            <param name="innerText">The value from xml element.</param>
+            <returns>privacy status.</returns>
+        </member>
+        <member name="M:Steam_Miner.Services.Steam.Parsers.IParseService.GetIfAccountIsLimited(System.String)">
+            <summary>
+            Determines whether is account limited by the text.
+            </summary>
+            <param name="innerText">The inner text of the XML.</param>
+            <returns>
+              If account is limited, return true.
+            </returns>
+        </member>
+        <member name="M:Steam_Miner.Services.Steam.Parsers.IParseService.GetOfflineSinceDays(System.String)">
+            <summary>
+            Parse the string, so it returns how many days the account have been offline.
+            </summary>
+            <param name="innerText">The inner text of the XML.</param>
+            <returns>days since the account is offline.</returns>
+        </member>
+        <member name="M:Steam_Miner.Services.Steam.Parsers.IParseService.GetMemberSince(System.String)">
+            <summary>
+            Parse the steam XML date format to system dateTime.
+            </summary>
+            <param name="innerText">The inner text of the XML.</param>
+            <returns>Date when the account was created.</returns>
+        </member>
+        <member name="M:Steam_Miner.Services.Steam.Parsers.IParseService.CheckForCSGO(System.Xml.XmlNode)">
+            <summary>
+            Checks for csgo in games.
+            </summary>
+            <param name="gameNodes">The xml node.</param>
+            <returns>If he owns csgo, return true.</returns>
+        </member>
+        <member name="M:Steam_Miner.Services.Steam.Parsers.IParseService.GetCountry(System.String)">
+            <summary>
+            Gets the country without city and etc...
+            </summary>
+            <param name="innerText">The inner text of the XML.</param>
+            <returns>Country.</returns>
+        </member>
+        <member name="T:Steam_Miner.Services.Steam.Parsers.ItemParserService">
+            <inheritdoc/>
+        </member>
+        <member name="M:Steam_Miner.Services.Steam.Parsers.ItemParserService.PriceParse(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Steam_Miner.Services.Steam.Parsers.ItemParserService.VolumeParse(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Steam_Miner.Services.Steam.Parsers.ParseService">
+            <inheritdoc/>
+        </member>
+        <member name="M:Steam_Miner.Services.Steam.Parsers.ParseService.CheckForCSGO(System.Xml.XmlNode)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Steam_Miner.Services.Steam.Parsers.ParseService.GetCountry(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Steam_Miner.Services.Steam.Parsers.ParseService.GetPrivacyStatus(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Steam_Miner.Services.Steam.Parsers.ParseService.GetIfAccountIsLimited(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Steam_Miner.Services.Steam.Parsers.ParseService.GetMemberSince(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Steam_Miner.Services.Steam.Parsers.ParseService.GetOfflineSinceDays(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Steam_Miner.Services.Steam.ScanProfilesService">
+            <inheritdoc/>
+        </member>
+        <member name="M:Steam_Miner.Services.Steam.ScanProfilesService.ScanProfiles(System.Collections.Generic.List{Steam_Miner.Models.ToBeScannedProfile})">
+            <inheritdoc/>
+        </member>
+        <member name="T:Steam_Miner.Startup">
+            <summary>
+            Startup class.
+            </summary>
+        </member>
+        <member name="M:Steam_Miner.Startup.Main">
+            <summary>
+            Defines the entry point of the application.
+            </summary>
+        </member>
+        <member name="T:SteamTradeBot.Models.Enums.PrivacyStatus">
+            <summary>
+            Represent an enumeration for privacy status.
+            </summary>
+        </member>
+        <member name="F:SteamTradeBot.Models.Enums.PrivacyStatus.Public">
+            <summary>
+            Public privacy status
+            </summary>
+        </member>
+        <member name="F:SteamTradeBot.Models.Enums.PrivacyStatus.Private">
+            <summary>
+            Private privacy status
+            </summary>
+        </member>
+        <member name="F:SteamTradeBot.Models.Enums.PrivacyStatus.FriendsOnly">
+            <summary>
+            Friends only privacy status
+            </summary>
+        </member>
+    </members>
+</doc>
